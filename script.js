@@ -541,6 +541,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initial check for animations
     revealOnScroll();
+
+    // Scroll-based Hero Minion Zoom
+    const heroMinion = document.getElementById('heroMinion');
+
+    function handleScrollZoom() {
+        if (!heroMinion) return;
+        const scrollPos = window.scrollY;
+        const documentHeight = document.documentElement.scrollHeight;
+        const windowHeight = window.innerHeight;
+
+        const maxScroll = documentHeight - windowHeight;
+        const scrollPercent = maxScroll > 0 ? Math.min(Math.max(scrollPos / maxScroll, 0), 1) : 0;
+
+        // Travel top to bottom relative to screen: 10% to 80% viewport height
+        const topPos = 10 + (scrollPercent * 70);
+
+        // Oscillation using a sawtooth or absolute sine for pulses
+        // Multiply by 6 for ~3 full pulse cycles throughout the scroll
+        const oscillation = Math.abs(Math.sin(scrollPercent * Math.PI * 3));
+
+        const scale = 1 + (oscillation * 1.5); // Zooms between 1x and 2.5x
+        const opacity = 0.1 + (oscillation * 0.25); // Opacity pulses between 0.1 and 0.35
+
+        heroMinion.style.top = `${topPos}vh`; // Use vh for viewport precision
+        heroMinion.style.transform = `translate(-50%, -50%) scale(${scale})`;
+        heroMinion.style.opacity = opacity;
+    }
+
+    window.addEventListener('scroll', () => {
+        requestAnimationFrame(handleScrollZoom);
+    });
 });
 
 // Export functions for potential external use

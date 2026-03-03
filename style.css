@@ -51,6 +51,43 @@ body {
     min-height: 100vh;
 }
 
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(rgba(255, 215, 0, 0.1) 1.5px, transparent 1.5px);
+    background-size: 40px 40px;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(107, 76, 154, 0.1) 0%, transparent 80%);
+    z-index: -1;
+    pointer-events: none;
+    animation: glow-move 10s ease-in-out infinite alternate;
+}
+
+@keyframes glow-move {
+    0% {
+        transform: translate(-10%, -10%) scale(1);
+    }
+
+    100% {
+        transform: translate(10%, 10%) scale(1.1);
+    }
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -528,6 +565,16 @@ body {
     .nav-menu li {
         margin: 10px 0;
     }
+
+    .hero-minion-wrapper {
+        width: 300px;
+        height: 300px;
+        opacity: 0.3;
+    }
+
+    .hero-title-3d {
+        font-size: clamp(2.5rem, 8vw, 5rem);
+    }
 }
 
 /* ====================
@@ -601,6 +648,84 @@ body {
     50% {
         transform: translateY(-30px) rotate(10deg);
     }
+}
+
+/* Hero Minion Section */
+.hero-minion-wrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.15;
+    pointer-events: none;
+    transition: transform 0.05s linear;
+    will-change: transform, top;
+}
+
+.hero-minion {
+    position: relative;
+    width: 120px;
+    height: 160px;
+}
+
+.hero-minion .minion-head {
+    width: 100px;
+    height: 120px;
+    background: var(--minion-yellow);
+    border-radius: 50px 50px 40px 40px;
+    border: 4px solid var(--dark-blue);
+    position: relative;
+    margin: 0 auto;
+}
+
+.hero-minion .minion-goggles {
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 25px;
+    background: var(--dark-blue);
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+}
+
+.hero-minion .goggle-eye {
+    width: 30px;
+    height: 30px;
+    background: var(--white);
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-minion .eye-pupil {
+    width: 12px;
+    height: 12px;
+    background: #4A3728;
+    border-radius: 50%;
+    animation: eye-blink 3s ease-in-out infinite;
+}
+
+.hero-minion .minion-mouth {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 10px;
+    border-bottom: 3px solid var(--dark-blue);
+    border-radius: 50%;
 }
 
 .hero-content {
