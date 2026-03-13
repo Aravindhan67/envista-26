@@ -1,33 +1,475 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <title>Event Registration</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Envistas'26 | CSI - KEC Student Branch</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
+
 <body>
-    <h1>Events</h1>
-    <div class="event-card">
-        <h2>Paper Battle</h2>
-        <p>Description of Paper Battle event.</p>
-        <a href="https://forms.gle/Peqy816Xd6YudEXV7">Register Now</a>
-    </div>
-    <div class="event-card">
-        <h2>Skill Quest</h2>
-        <p>Description of Skill Quest event.</p>
-        <a href="https://forms.gle/GxYixpAoAoquBdVEA">Register Now</a>
-    </div>
-    <div class="event-card">
-        <h2>Idea Pitch</h2>
-        <p>Description of Idea Pitch event.</p>
-        <a href="https://forms.gle/xgZ4RHkEWQMXKwA98">Register Now</a>
-    </div>
-    <div class="event-card">
-        <h2>DesignForge</h2>
-        <p>An individual event of 1:30 hour where single participant will compete in UIUX Designing challenge.</p>
-        <a href="https://forms.gle/eXR46bDXnymLEfr2A">Register Now</a>
-    </div>
-    <div class="event-card">
-        <h2>CodeRush</h2>
-        <p>Description of CodeRush event.</p>
-        <a href="https://forms.gle/jTZYbFSLHotf7HBi7">Register Now</a>
-    </div>
+
+<div id="confettiContainer" class="confetti-container"></div>
+
+<!-- NAVBAR -->
+
+<nav class="navbar" id="navbar">
+
+<div class="nav-container">
+
+<div class="nav-logo">
+<span class="logo-text">ENVISTAS</span>
+<span class="year-highlight">'26</span>
+</div>
+
+<ul class="nav-menu" id="navMenu">
+
+<li><a href="#home" class="nav-link">Home</a></li>
+
+<li><a href="#about" class="nav-link">About</a></li>
+
+<li><a href="#events" class="nav-link">Events</a></li>
+
+<li><a href="#register" class="nav-link">Register</a></li>
+
+<li><a href="#contact" class="nav-link">Contact</a></li>
+
+</ul>
+
+<div class="hamburger" id="hamburger">
+
+<span class="bar"></span>
+<span class="bar"></span>
+<span class="bar"></span>
+
+</div>
+
+</div>
+
+</nav>
+
+<!-- HERO SECTION -->
+
+<section class="hero-section" id="home">
+
+<div class="hero-content">
+
+<div class="hero-badge">
+Intra College Symposium
+</div>
+
+<h1 class="hero-title-3d">
+
+<span class="title-line title-1">ENVISTAS</span>
+
+<span class="title-line title-2">2026</span>
+
+</h1>
+
+<p class="hero-subtitle">
+Intra College Symposium open to all departments
+</p>
+
+<p class="hero-organizer">
+Conducted by <span class="csi-highlight">CSI - KEC Student Branch</span>
+</p>
+
+<div class="hero-buttons">
+
+<a href="#events" class="btn btn-primary btn-glow">
+Explore Events
+</a>
+
+<a href="#register" class="btn btn-secondary">
+Registration Details
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="about-section" id="about">
+
+<div class="container">
+
+<h2 class="section-title">
+
+<span class="title-gradient">About Envistas</span>
+
+</h2>
+
+<p class="section-subtitle">
+
+Envistas'26 is a technical symposium conducted by CSI - KEC Student Branch to encourage creativity, innovation, and technical skills among students.
+
+</p>
+
+<div class="about-grid">
+
+<div class="about-card glass-card reveal-card">
+
+<div class="card-icon">
+<i class="fas fa-lightbulb"></i>
+</div>
+
+<h3>Innovation</h3>
+
+<p>Showcase your innovative ideas and technical creativity through exciting competitions.</p>
+
+</div>
+
+<div class="about-card glass-card reveal-card">
+
+<div class="card-icon">
+<i class="fas fa-users"></i>
+</div>
+
+<h3>Collaboration</h3>
+
+<p>Meet students from different departments and collaborate on exciting challenges.</p>
+
+</div>
+
+<div class="about-card glass-card reveal-card">
+
+<div class="card-icon">
+<i class="fas fa-trophy"></i>
+</div>
+
+<h3>Competition</h3>
+
+<p>Compete in technical and creative events and win exciting prizes.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- EVENTS -->
+
+<section class="events-section" id="events">
+
+<div class="container">
+
+<h2 class="section-title">
+<span class="title-gradient">Events</span>
+</h2>
+
+<p class="section-subtitle">
+Exciting technical and creative competitions
+</p>
+
+<div class="events-grid">
+
+<!-- Code Rush -->
+
+<div class="event-card glass-card tilt-card reveal-card">
+
+<div class="event-card-header">
+
+<div class="event-icon-wrapper">💻</div>
+
+<span class="event-badge">Technical</span>
+
+</div>
+
+<h3 class="event-title">Code Rush</h3>
+
+<p class="event-description">
+
+A competitive programming challenge where participants solve coding problems within a limited time. Test your logical thinking and programming speed.
+
+</p>
+
+<div class="event-footer">
+
+<a href="https://forms.gle/jTZYbFSLHotf7HBi7" target="_blank" class="btn btn-primary">
+Register Now
+</a>
+
+</div>
+
+</div>
+
+<!-- Skill Quest -->
+
+<div class="event-card glass-card tilt-card reveal-card">
+
+<div class="event-card-header">
+
+<div class="event-icon-wrapper">🧠</div>
+
+<span class="event-badge">Technical</span>
+
+</div>
+
+<h3 class="event-title">Skill Quest</h3>
+
+<p class="event-description">
+
+A multi-round event testing analytical thinking, technical knowledge, and problem-solving skills through puzzles and challenges.
+
+</p>
+
+<div class="event-footer">
+
+<a href="https://forms.gle/GxYixpAoAoquBdVEA" target="_blank" class="btn btn-primary">
+Register Now
+</a>
+
+</div>
+
+</div>
+
+<!-- Paper Battle -->
+
+<div class="event-card glass-card tilt-card reveal-card">
+
+<div class="event-card-header">
+
+<div class="event-icon-wrapper">📄</div>
+
+<span class="event-badge">Presentation</span>
+
+</div>
+
+<h3 class="event-title">Paper Battle</h3>
+
+<p class="event-description">
+
+Participants present innovative technical ideas and research papers while demonstrating strong presentation and communication skills.
+
+</p>
+
+<div class="event-footer">
+
+<a href="https://forms.gle/Peqy816Xd6YudEXV7" target="_blank" class="btn btn-primary">
+Register Now
+</a>
+
+</div>
+
+</div>
+
+<!-- Design Forge -->
+
+<div class="event-card glass-card tilt-card reveal-card">
+
+<div class="event-card-header">
+
+<div class="event-icon-wrapper">🎨</div>
+
+<span class="event-badge">Design</span>
+
+</div>
+
+<h3 class="event-title">Design Forge</h3>
+
+<p class="event-description">
+
+An individual event of 1 hour 30 minutes where participants compete in a UI/UX designing challenge and build creative user-friendly interfaces.
+
+</p>
+
+<div class="event-footer">
+
+<a href="https://forms.gle/eXR46bDXnymLEfr2A" target="_blank" class="btn btn-primary">
+Register Now
+</a>
+
+</div>
+
+</div>
+
+<!-- Idea Pitch -->
+
+<div class="event-card glass-card tilt-card reveal-card">
+
+<div class="event-card-header">
+
+<div class="event-icon-wrapper">🚀</div>
+
+<span class="event-badge">Innovation</span>
+
+</div>
+
+<h3 class="event-title">Idea Pitch</h3>
+
+<p class="event-description">
+
+Pitch your innovative startup or technology idea in front of judges and demonstrate creativity, feasibility, and impact.
+
+</p>
+
+<div class="event-footer">
+
+<a href="https://forms.gle/xgZ4RHkEWQMXKwA98" target="_blank" class="btn btn-primary">
+Register Now
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- REGISTRATION -->
+
+<section class="register-section" id="register">
+
+<div class="container">
+
+<h2 class="section-title">
+<span class="title-gradient">Registration</span>
+</h2>
+
+<div class="register-grid">
+
+<div class="registration-details">
+
+<div class="fee-card glass-card">
+
+<h3>Registration Fee</h3>
+
+<div class="fee-grid">
+
+<div class="fee-item">
+<div class="fee-type">CSI Members</div>
+<div class="fee-amount free">FREE</div>
+</div>
+
+<div class="fee-item">
+<div class="fee-type">Non CSI Members</div>
+<div class="fee-amount">₹100</div>
+</div>
+
+</div>
+
+</div>
+
+<div class="important-info glass-card">
+
+<h3>Event Details</h3>
+
+<ul class="info-list">
+
+<li>
+<i class="fas fa-university"></i>
+Intra College Symposium open to all departments
+</li>
+
+<li>
+<i class="fas fa-users"></i>
+Conducted by CSI - KEC Student Branch
+</li>
+
+<li>
+<i class="fas fa-calendar"></i>
+Event Name : Envistas'26
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact-section" id="contact">
+
+<div class="container">
+
+<h2 class="section-title">
+<span class="title-gradient">Contact</span>
+</h2>
+
+<div class="contact-grid">
+
+<div class="contact-card glass-card">
+
+<div class="avatar">👨</div>
+
+<div class="contact-person">
+
+<h3>Barathram</h3>
+
+<a href="tel:6380564753" class="contact-phone">
+<i class="fas fa-phone"></i> 6380564753
+</a>
+
+</div>
+
+</div>
+
+<div class="contact-card glass-card">
+
+<div class="avatar">👩</div>
+
+<div class="contact-person">
+
+<h3>Athvaitha</h3>
+
+<a href="tel:9677511479" class="contact-phone">
+<i class="fas fa-phone"></i> 9677511479
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+<div class="footer-bottom">
+
+<p>
+© 2026 Envistas | CSI - KEC Student Branch
+</p>
+
+<p>
+Kongu Engineering College (Autonomous)
+</p>
+
+</div>
+
+</footer>
+
+<script src="script.js"></script>
+
 </body>
+
 </html>
